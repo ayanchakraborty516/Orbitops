@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #F3EFE7;
+    --bg-surface: #FAF7F2;
+    --bg-stone: #E5DED2;
+    --bg-stone-subtle: #ECE7DE;
+    --border-color: #D8D0C3;
+    --border-subtle: #E3DCCE;
+    --text-primary: #24251F;
+    --text-secondary: #57554D;
+    --text-muted: #7E7B72;
+    --accent-orange: #C65D3A;
+    --accent-orange-hover: #B24F2E;
+    --accent-orange-subtle: rgba(198, 93, 58, 0.08);
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg-base: #181916;
+    --bg-surface: #20221E;
+    --bg-stone: #2A2C27;
+    --bg-stone-subtle: #242621;
+    --border-color: #353831;
+    --border-subtle: #2D302A;
+    --text-primary: #EAE7E0;
+    --text-secondary: #B8B5AC;
+    --text-muted: #87857C;
+    --accent-orange: #D9734E;
+    --accent-orange-hover: #E38360;
+    --accent-orange-subtle: rgba(217, 115, 78, 0.12);
+    color-scheme: dark;
+  }
+
+  html, body, #root {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+/* Custom hairline borders and dividers */
+.border-fine {
+  border-color: var(--border-color);
+}
+
+.border-subtle {
+  border-color: var(--border-subtle);
+}
+
+/* Studio texture overlay */
+.bg-studio-canvas {
+  background-color: var(--bg-base);
+  background-image: radial-gradient(rgba(36, 37, 31, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-studio-canvas {
+  background-color: var(--bg-base);
+  background-image: radial-gradient(rgba(234, 231, 224, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle studio scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4BCAC;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3E423A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89F8D;
+}
